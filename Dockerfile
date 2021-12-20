@@ -8,7 +8,8 @@ ENV GO111MODULE=on \
 WORKDIR /build
 
 COPY go.mod go.sum server.go ./
-ADD config ./
+
+ADD config ./config/
 
 RUN go mod download
 
