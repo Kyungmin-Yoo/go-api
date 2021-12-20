@@ -9,7 +9,7 @@ WORKDIR /build
 
 COPY go.mod go.sum server.go ./
 
-ADD config ./config/
+ADD config ./config
 
 RUN go mod download
 
@@ -22,5 +22,7 @@ RUN cp /build/main .
 FROM scratch
 
 COPY --from=builder /dist/main .
+
+EXPOSE 1323
 
 ENTRYPOINT ["/main"]

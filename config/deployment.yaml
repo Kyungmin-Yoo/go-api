@@ -19,5 +19,5 @@ spec:
           image: myapp:latest
           imagePullPolicy: Never
           ports:
-            - containerPort: 3000
+            - containerPort: 1323
               protocol: TCP

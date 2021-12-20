@@ -14,15 +14,12 @@ func main() {
 
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello World222")
+		return c.String(http.StatusOK, "Hello World\n")
 	})
 	e.GET("/users/:id", getUser)
 	e.Logger.Fatal(e.Start(":1323"))
 }
 
 func getUser(c echo.Context) error {
-	id := c.Param("id")
-	user := new(User)
-	user.ID = id
 	return c.JSON(http.StatusOK, new(User))
 }

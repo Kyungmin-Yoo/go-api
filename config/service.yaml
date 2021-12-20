@@ -10,7 +10,7 @@ spec:
   ports:
     - name: http
       port: 3000
-      targetPort: 3000
+      targetPort: 1323
       protocol: TCP
   selector:
     app: myapp
